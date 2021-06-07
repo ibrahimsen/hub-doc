@@ -1,0 +1,98 @@
+get:
+  tags:
+    - Countries
+  operationId: Countries_GetById
+  parameters:
+    - name: id
+      in: path
+      required: true
+      schema:
+        type: string
+        nullable: true
+      x-position: 1
+  responses:
+    '200':
+      description: ''
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/BasePageResponseOfCountryDto.yaml
+    '400':
+      description: ''
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/BaseErrorResponse.yaml
+    '404':
+      description: ''
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/BaseErrorResponse.yaml
+    '422':
+      description: ''
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/BaseErrorResponse.yaml
+    '500':
+      description: ''
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/BaseErrorResponse.yaml
+  security:
+    - Bearer: []
+put:
+  tags:
+    - Countries
+  operationId: Countries_Update
+  parameters:
+    - name: id
+      in: path
+      required: true
+      schema:
+        type: string
+        nullable: true
+      x-position: 1
+  requestBody:
+    x-name: request
+    content:
+      application/json:
+        schema:
+          $ref: ../components/schemas/CountryDto.yaml
+    required: true
+    x-position: 2
+  responses:
+    '200':
+      description: ''
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/BaseResponseOfCountryDto.yaml
+    '400':
+      description: ''
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/BaseErrorResponse.yaml
+    '404':
+      description: ''
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/BaseErrorResponse.yaml
+    '422':
+      description: ''
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/BaseErrorResponse.yaml
+    '500':
+      description: ''
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/BaseErrorResponse.yaml
+  security:
+    - Bearer: []

@@ -1,0 +1,10 @@
+type: string
+description: ''
+x-enumNames:
+  - OneWay
+  - RoundTrip
+  - MultiCity
+enum:
+  - OneWay
+  - RoundTrip
+  - MultiCity

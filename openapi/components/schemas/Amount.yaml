@@ -1,0 +1,13 @@
+allOf:
+  - $ref: ./ValueObject.yaml
+  - type: object
+    additionalProperties: false
+    properties:
+      value:
+        type: number
+        format: decimal
+      currency:
+        type: string
+        default: EUR
+        maxLength: 5
+        nullable: true

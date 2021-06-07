@@ -1,0 +1,12 @@
+type: object
+additionalProperties: false
+properties:
+  code:
+    type: string
+    nullable: true
+  number:
+    type: integer
+    format: int32
+  name:
+    type: string
+    nullable: true

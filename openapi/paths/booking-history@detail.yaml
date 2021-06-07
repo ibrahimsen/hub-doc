@@ -1,0 +1,50 @@
+get:
+  tags:
+    - BookingHistory
+  operationId: BookingHistory_GetBookingDetail
+  parameters:
+    - name: booking_id
+      in: query
+      schema:
+        type: string
+        nullable: true
+      x-position: 1
+    - name: booking_reference
+      in: query
+      schema:
+        type: string
+        nullable: true
+      x-position: 2
+  responses:
+    '200':
+      description: ''
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/BaseResponseOfGetBookingDetailResponse.yaml
+    '400':
+      description: ''
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/BaseErrorResponse.yaml
+    '404':
+      description: ''
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/BaseErrorResponse.yaml
+    '422':
+      description: ''
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/BaseErrorResponse.yaml
+    '500':
+      description: ''
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/BaseErrorResponse.yaml
+  security:
+    - Bearer: []

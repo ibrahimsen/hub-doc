@@ -1,0 +1,36 @@
+type: object
+additionalProperties: false
+properties:
+  br:
+    type: string
+    nullable: true
+  pt:
+    type: string
+    nullable: true
+  nl:
+    type: string
+    nullable: true
+  hr:
+    type: string
+    nullable: true
+  fa:
+    type: string
+    nullable: true
+  de:
+    type: string
+    nullable: true
+  es:
+    type: string
+    nullable: true
+  fr:
+    type: string
+    nullable: true
+  ja:
+    type: string
+    nullable: true
+  it:
+    type: string
+    nullable: true
+  tr:
+    type: string
+    nullable: true

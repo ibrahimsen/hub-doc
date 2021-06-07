@@ -1,0 +1,19 @@
+allOf:
+  - $ref: ./ValueObject.yaml
+  - type: object
+    additionalProperties: false
+    properties:
+      min_amount:
+        type: number
+        format: decimal
+      max_amount:
+        type: number
+        format: decimal
+      profit_type:
+        $ref: ./ProfitTypes.yaml
+      profit_value:
+        type: number
+        format: decimal
+      profit_currency:
+        type: string
+        nullable: true

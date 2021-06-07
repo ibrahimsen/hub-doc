@@ -1,0 +1,20 @@
+type: object
+additionalProperties: false
+properties:
+  success:
+    type: boolean
+  refunded_amount:
+    nullable: true
+    oneOf:
+      - $ref: ./Amount.yaml
+  penalty_amount:
+    nullable: true
+    oneOf:
+      - $ref: ./Amount.yaml
+  booking_reference:
+    type: string
+    nullable: true
+  booking_status:
+    $ref: ./BookingStatusTypes.yaml
+  ticketing_status:
+    $ref: ./TicketingStatusTypes.yaml

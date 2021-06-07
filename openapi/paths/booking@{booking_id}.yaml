@@ -1,0 +1,90 @@
+get:
+  tags:
+    - Booking
+  operationId: Booking_GetBookingInfo
+  parameters:
+    - name: booking_id
+      in: path
+      required: true
+      schema:
+        type: string
+        nullable: true
+      x-position: 1
+  responses:
+    '200':
+      description: ''
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/BaseResponseOfGetBookingInfoResponse.yaml
+    '400':
+      description: ''
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/BaseErrorResponse.yaml
+    '404':
+      description: ''
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/BaseErrorResponse.yaml
+    '422':
+      description: ''
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/BaseErrorResponse.yaml
+    '500':
+      description: ''
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/BaseErrorResponse.yaml
+  security:
+    - Bearer: []
+delete:
+  tags:
+    - Booking
+  operationId: Booking_CancelBooking
+  parameters:
+    - name: booking_id
+      in: path
+      required: true
+      schema:
+        type: string
+        nullable: true
+      x-position: 1
+  responses:
+    '200':
+      description: ''
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/BaseResponseOfCancelBookingResponse.yaml
+    '400':
+      description: ''
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/BaseErrorResponse.yaml
+    '404':
+      description: ''
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/BaseErrorResponse.yaml
+    '422':
+      description: ''
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/BaseErrorResponse.yaml
+    '500':
+      description: ''
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/BaseErrorResponse.yaml
+  security:
+    - Bearer: []

@@ -1,0 +1,23 @@
+type: object
+additionalProperties: false
+properties:
+  data_id:
+    type: string
+    nullable: true
+  offers:
+    type: array
+    nullable: true
+    items:
+      $ref: ./OfferResponseDto.yaml
+  request:
+    nullable: true
+    oneOf:
+      - $ref: ./GetOfferRequest.yaml
+  total_count:
+    type: integer
+    format: int32
+  filtered_count:
+    type: integer
+    format: int32
+  route_type:
+    $ref: ./RouteTypes.yaml

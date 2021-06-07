@@ -1,0 +1,14 @@
+type: string
+description: ''
+x-enumNames:
+  - None
+  - Economy
+  - Business
+  - First
+  - PremiumEconomy
+enum:
+  - None
+  - Economy
+  - Business
+  - First
+  - PremiumEconomy

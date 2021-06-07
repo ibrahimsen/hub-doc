@@ -1,0 +1,7 @@
+type: object
+additionalProperties: false
+properties:
+  id:
+    type: string
+    description: Unique id for entity
+    nullable: true

@@ -1,0 +1,15 @@
+type: object
+additionalProperties: false
+properties:
+  index:
+    type: integer
+    format: int32
+  segments:
+    type: array
+    nullable: true
+    items:
+      $ref: ./Segment.yaml
+  service:
+    nullable: true
+    oneOf:
+      - $ref: ./ExtraService.yaml

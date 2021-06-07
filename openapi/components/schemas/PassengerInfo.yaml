@@ -1,0 +1,9 @@
+type: object
+additionalProperties: false
+properties:
+  passenger_type:
+    $ref: ./PassengerTypes.yaml
+  quantity:
+    type: integer
+    format: int32
+    default: 1

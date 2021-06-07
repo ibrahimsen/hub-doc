@@ -1,0 +1,14 @@
+type: object
+additionalProperties: false
+properties:
+  data:
+    type: array
+    nullable: true
+    items:
+      type: array
+      items:
+        $ref: ./AircraftDto.yaml
+  meta:
+    nullable: true
+    oneOf:
+      - $ref: ./PageMeta.yaml

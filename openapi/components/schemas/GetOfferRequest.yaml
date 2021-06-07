@@ -1,0 +1,32 @@
+type: object
+additionalProperties: false
+required:
+  - cabin_type
+  - passengers
+  - routes
+properties:
+  cabin_type:
+    $ref: ./CabinTypes.yaml
+  passengers:
+    type: array
+    items:
+      $ref: ./PassengerInfo.yaml
+  routes:
+    type: array
+    items:
+      $ref: ./RouteInfo.yaml
+  prefered_airlines:
+    type: array
+    default:
+      - TK
+    nullable: true
+    items:
+      type: string
+  retrieve_options:
+    nullable: true
+    oneOf:
+      - $ref: ./OfferRetrievePreference.yaml
+  transfer_type:
+    default: Direct
+    oneOf:
+      - $ref: ./TransferTypes.yaml

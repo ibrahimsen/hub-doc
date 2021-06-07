@@ -1,0 +1,18 @@
+type: string
+description: ''
+x-enumNames:
+  - None
+  - PreBooking
+  - Pending
+  - Booked
+  - Cancelled
+  - BookingFailed
+  - BookingCancellationFailed
+enum:
+  - None
+  - PreBooking
+  - Pending
+  - Booked
+  - Cancelled
+  - BookingFailed
+  - BookingCancellationFailed

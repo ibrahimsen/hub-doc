@@ -1,0 +1,11 @@
+type: object
+additionalProperties: false
+required:
+  - offer_id
+  - booking_data
+properties:
+  offer_id:
+    type: string
+    minLength: 1
+  booking_data:
+    $ref: ./BookingRequestDto.yaml

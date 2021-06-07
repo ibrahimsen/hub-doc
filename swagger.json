@@ -1,0 +1,4636 @@
+{
+  "x-generator": "NSwag v13.11.1.0 (NJsonSchema v10.4.3.0 (Newtonsoft.Json v13.0.0.0))",
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Flight API",
+    "description": "Flight API",
+    "version": "Beta"
+  },
+  "servers": [
+    {
+      "url": "https://utest.flight.hub.b2bholidays.com"
+    }
+  ],
+  "paths": {
+    "/aircrafts": {
+      "get": {
+        "tags": [
+          "Aircrafts"
+        ],
+        "operationId": "Aircrafts_GetAircrafts",
+        "parameters": [
+          {
+            "name": "Index",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "x-position": 1
+          },
+          {
+            "name": "Size",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "x-position": 2
+          },
+          {
+            "name": "From",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "x-position": 3
+          }
+        ],
+        "responses": {
+          "400": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BaseErrorResponse"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BaseErrorResponse"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BaseErrorResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BaseErrorResponse"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BasePageResponseOfIEnumerableOfAircraftDto"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "Bearer": []
+          }
+        ]
+      }
+    },
+    "/aircrafts/{id}": {
+      "get": {
+        "tags": [
+          "Aircrafts"
+        ],
+        "operationId": "Aircrafts_GetAircraftById",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "nullable": true
+            },
+            "x-position": 1
+          }
+        ],
+        "responses": {
+          "400": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BaseErrorResponse"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BaseErrorResponse"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BaseErrorResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BaseErrorResponse"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BaseResponseOfAircraftDto"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "Bearer": []
+          }
+        ]
+      }
+    },
+    "/airlines": {
+      "get": {
+        "tags": [
+          "Airlines"
+        ],
+        "operationId": "Airlines_Get",
+        "parameters": [
+          {
+            "name": "Index",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "x-position": 1
+          },
+          {
+            "name": "Size",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "x-position": 2
+          },
+          {
+            "name": "From",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "x-position": 3
+          }
+        ],
+        "responses": {
+          "400": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BaseErrorResponse"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BaseErrorResponse"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BaseErrorResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BaseErrorResponse"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BasePageResponseOfIEnumerableOfAirlineDto"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "Bearer": []
+          }
+        ]
+      }
+    },
+    "/airlines/{id}": {
+      "get": {
+        "tags": [
+          "Airlines"
+        ],
+        "operationId": "Airlines_GetById",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "nullable": true
+            },
+            "x-position": 1
+          }
+        ],
+        "responses": {
+          "400": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BaseErrorResponse"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BaseErrorResponse"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BaseErrorResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BaseErrorResponse"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BaseResponseOfAirlineDto"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "Bearer": []
+          }
+        ]
+      }
+    },
+    "/airports": {
+      "get": {
+        "tags": [
+          "Airports"
+        ],
+        "operationId": "Airports_GetAirports",
+        "parameters": [
+          {
+            "name": "Index",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "x-position": 1
+          },
+          {
+            "name": "Size",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "x-position": 2
+          },
+          {
+            "name": "From",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "x-position": 3
+          }
+        ],
+        "responses": {
+          "400": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BaseErrorResponse"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BaseErrorResponse"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BaseErrorResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BaseErrorResponse"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BasePageResponseOfIEnumerableOfAirportDto"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "Bearer": []
+          }
+        ]
+      }
+    },
+    "/airports/{id}": {
+      "get": {
+        "tags": [
+          "Airports"
+        ],
+        "operationId": "Airports_GetAirportById",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "nullable": true
+            },
+            "x-position": 1
+          }
+        ],
+        "responses": {
+          "400": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BaseErrorResponse"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BaseErrorResponse"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BaseErrorResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BaseErrorResponse"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BaseResponseOfAirportDto"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "Bearer": []
+          }
+        ]
+      }
+    },
+    "/booking": {
+      "post": {
+        "tags": [
+          "Booking"
+        ],
+        "operationId": "Booking_Booking",
+        "requestBody": {
+          "x-name": "request",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateBookingRequest"
+              }
+            }
+          },
+          "required": true,
+          "x-position": 1
+        },
+        "responses": {
+          "400": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BaseErrorResponse"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BaseErrorResponse"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BaseErrorResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BaseErrorResponse"
+                }
+              }
+            }
+          },
+          "201": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BaseResponseOfCreateBookingResponse"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "Bearer": []
+          }
+        ]
+      }
+    },
+    "/booking/{booking_id}": {
+      "get": {
+        "tags": [
+          "Booking"
+        ],
+        "operationId": "Booking_GetBookingInfo",
+        "parameters": [
+          {
+            "name": "booking_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "nullable": true
+            },
+            "x-position": 1
+          }
+        ],
+        "responses": {
+          "400": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BaseErrorResponse"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BaseErrorResponse"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BaseErrorResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BaseErrorResponse"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BaseResponseOfGetBookingInfoResponse"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "Bearer": []
+          }
+        ]
+      },
+      "delete": {
+        "tags": [
+          "Booking"
+        ],
+        "operationId": "Booking_CancelBooking",
+        "parameters": [
+          {
+            "name": "booking_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "nullable": true
+            },
+            "x-position": 1
+          }
+        ],
+        "responses": {
+          "400": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BaseErrorResponse"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BaseErrorResponse"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BaseErrorResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BaseErrorResponse"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BaseResponseOfCancelBookingResponse"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "Bearer": []
+          }
+        ]
+      }
+    },
+    "/booking-history": {
+      "get": {
+        "tags": [
+          "BookingHistory"
+        ],
+        "operationId": "BookingHistory_GetClientBookings",
+        "parameters": [
+          {
+            "name": "Index",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "x-position": 1
+          },
+          {
+            "name": "Size",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "x-position": 2
+          },
+          {
+            "name": "From",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "x-position": 3
+          }
+        ],
+        "responses": {
+          "400": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BaseErrorResponse"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BaseErrorResponse"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BaseErrorResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BaseErrorResponse"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BasePageResponseOfGetBookingsResponse"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "Bearer": []
+          }
+        ]
+      }
+    },
+    "/booking-history/detail": {
+      "get": {
+        "tags": [
+          "BookingHistory"
+        ],
+        "operationId": "BookingHistory_GetBookingDetail",
+        "parameters": [
+          {
+            "name": "booking_id",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "nullable": true
+            },
+            "x-position": 1
+          },
+          {
+            "name": "booking_reference",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "nullable": true
+            },
+            "x-position": 2
+          }
+        ],
+        "responses": {
+          "400": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BaseErrorResponse"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BaseErrorResponse"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BaseErrorResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BaseErrorResponse"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BaseResponseOfGetBookingDetailResponse"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "Bearer": []
+          }
+        ]
+      }
+    },
+    "/countries": {
+      "get": {
+        "tags": [
+          "Countries"
+        ],
+        "operationId": "Countries_Get",
+        "parameters": [
+          {
+            "name": "Index",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "x-position": 1
+          },
+          {
+            "name": "Size",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "x-position": 2
+          },
+          {
+            "name": "From",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "x-position": 3
+          }
+        ],
+        "responses": {
+          "400": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BaseErrorResponse"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BaseErrorResponse"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BaseErrorResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BaseErrorResponse"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BasePageResponseOfIEnumerableOfCountryDto"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "Bearer": []
+          }
+        ]
+      },
+      "post": {
+        "tags": [
+          "Countries"
+        ],
+        "operationId": "Countries_Create",
+        "requestBody": {
+          "x-name": "request",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CountryDto"
+              }
+            }
+          },
+          "required": true,
+          "x-position": 1
+        },
+        "responses": {
+          "400": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BaseErrorResponse"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BaseErrorResponse"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BaseErrorResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BaseErrorResponse"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BaseResponseOfCountryDto"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "Bearer": []
+          }
+        ]
+      }
+    },
+    "/countries/{id}": {
+      "get": {
+        "tags": [
+          "Countries"
+        ],
+        "operationId": "Countries_GetById",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "nullable": true
+            },
+            "x-position": 1
+          }
+        ],
+        "responses": {
+          "400": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BaseErrorResponse"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BaseErrorResponse"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BaseErrorResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BaseErrorResponse"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BasePageResponseOfCountryDto"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "Bearer": []
+          }
+        ]
+      },
+      "put": {
+        "tags": [
+          "Countries"
+        ],
+        "operationId": "Countries_Update",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "nullable": true
+            },
+            "x-position": 1
+          }
+        ],
+        "requestBody": {
+          "x-name": "request",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CountryDto"
+              }
+            }
+          },
+          "required": true,
+          "x-position": 2
+        },
+        "responses": {
+          "400": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BaseErrorResponse"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BaseErrorResponse"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BaseErrorResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BaseErrorResponse"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BaseResponseOfCountryDto"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "Bearer": []
+          }
+        ]
+      }
+    },
+    "/offer/{offer_id}": {
+      "get": {
+        "tags": [
+          "Offer"
+        ],
+        "operationId": "Offer_GeOfferById",
+        "parameters": [
+          {
+            "name": "offer_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "nullable": true
+            },
+            "x-position": 1
+          }
+        ],
+        "responses": {
+          "400": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BaseErrorResponse"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BaseErrorResponse"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BaseErrorResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BaseErrorResponse"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BaseResponseOfGetOfferByOfferIdResponse"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "Bearer": []
+          }
+        ]
+      }
+    },
+    "/offer/{offer_id}/rules": {
+      "get": {
+        "tags": [
+          "Offer"
+        ],
+        "operationId": "Offer_GeOfferRules",
+        "parameters": [
+          {
+            "name": "offer_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "nullable": true
+            },
+            "x-position": 1
+          }
+        ],
+        "responses": {
+          "400": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BaseErrorResponse"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BaseErrorResponse"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BaseErrorResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BaseErrorResponse"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BaseResponseOfGetOfferRulesResponse"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "Bearer": []
+          }
+        ]
+      }
+    },
+    "/offer/{offer_id}/revalidate": {
+      "get": {
+        "tags": [
+          "Offer"
+        ],
+        "operationId": "Offer_OfferRevalidate",
+        "parameters": [
+          {
+            "name": "offer_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "nullable": true
+            },
+            "x-position": 1
+          }
+        ],
+        "responses": {
+          "400": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BaseErrorResponse"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BaseErrorResponse"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BaseErrorResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BaseErrorResponse"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BaseResponseOfOfferRevalidateResponse"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "Bearer": []
+          }
+        ]
+      }
+    },
+    "/offers": {
+      "post": {
+        "tags": [
+          "Offers"
+        ],
+        "operationId": "Offers_GetOffers",
+        "requestBody": {
+          "x-name": "request",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GetOfferRequest"
+              }
+            }
+          },
+          "required": true,
+          "x-position": 1
+        },
+        "responses": {
+          "400": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BaseErrorResponse"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BaseErrorResponse"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BaseErrorResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BaseErrorResponse"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BaseObjectPageResponseOfGetOfferResponse"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "Bearer": []
+          }
+        ]
+      }
+    },
+    "/offers/{data_id}": {
+      "get": {
+        "tags": [
+          "Offers"
+        ],
+        "operationId": "Offers_GetOffersByDataId",
+        "parameters": [
+          {
+            "name": "data_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "nullable": true
+            },
+            "x-position": 1
+          },
+          {
+            "name": "Index",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "x-position": 2
+          },
+          {
+            "name": "Size",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "x-position": 3
+          },
+          {
+            "name": "From",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "x-position": 4
+          }
+        ],
+        "responses": {
+          "400": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BaseErrorResponse"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BaseErrorResponse"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BaseErrorResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BaseErrorResponse"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BaseObjectPageResponseOfGetOfferResponse"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "Bearer": []
+          }
+        ]
+      }
+    },
+    "/offers/{data_id}/archive": {
+      "get": {
+        "tags": [
+          "Offers"
+        ],
+        "operationId": "Offers_GetArchiveOffersByDataId",
+        "parameters": [
+          {
+            "name": "data_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "nullable": true
+            },
+            "x-position": 1
+          },
+          {
+            "name": "Index",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "x-position": 2
+          },
+          {
+            "name": "Size",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "x-position": 3
+          },
+          {
+            "name": "From",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "x-position": 4
+          }
+        ],
+        "responses": {
+          "400": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BaseErrorResponse"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BaseErrorResponse"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BaseErrorResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BaseErrorResponse"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BaseObjectPageResponseOfGetOfferResponse"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "Bearer": []
+          }
+        ]
+      }
+    },
+    "/ticketing": {
+      "post": {
+        "tags": [
+          "Ticketing"
+        ],
+        "operationId": "Ticketing_Ticketing",
+        "requestBody": {
+          "x-name": "request",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/IssueTicketRequest"
+              }
+            }
+          },
+          "required": true,
+          "x-position": 1
+        },
+        "responses": {
+          "400": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BaseErrorResponse"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BaseErrorResponse"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BaseErrorResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BaseErrorResponse"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BaseResponseOfIssueTicketResponse"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "Bearer": []
+          }
+        ]
+      }
+    },
+    "/ticketing/{booking_id}": {
+      "delete": {
+        "tags": [
+          "Ticketing"
+        ],
+        "operationId": "Ticketing_Void",
+        "parameters": [
+          {
+            "name": "booking_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "nullable": true
+            },
+            "x-position": 1
+          }
+        ],
+        "responses": {
+          "400": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BaseErrorResponse"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BaseErrorResponse"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BaseErrorResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BaseErrorResponse"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BaseResponseOfVoidBookingResponse"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "Bearer": []
+          }
+        ]
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "BaseErrorResponse": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "errors": {
+            "type": "array",
+            "nullable": true,
+            "items": {
+              "$ref": "#/components/schemas/Error"
+            }
+          },
+          "meta": {
+            "nullable": true,
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/Meta"
+              }
+            ]
+          }
+        }
+      },
+      "Error": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "code": {
+            "type": "string",
+            "nullable": true
+          },
+          "message": {
+            "type": "string",
+            "nullable": true
+          },
+          "detail": {
+            "type": "string",
+            "nullable": true
+          },
+          "source": {
+            "type": "string",
+            "nullable": true
+          },
+          "lang": {
+            "type": "string",
+            "nullable": true
+          }
+        }
+      },
+      "Meta": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "transaction_id": {
+            "type": "string",
+            "nullable": true
+          }
+        }
+      },
+      "BasePageResponseOfIEnumerableOfAircraftDto": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "data": {
+            "type": "array",
+            "nullable": true,
+            "items": {
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/AircraftDto"
+              }
+            }
+          },
+          "meta": {
+            "nullable": true,
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/PageMeta"
+              }
+            ]
+          }
+        }
+      },
+      "AircraftDto": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/BaseDto"
+          },
+          {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "name": {
+                "type": "string",
+                "description": "Aircraft name",
+                "nullable": true
+              },
+              "iata": {
+                "type": "string",
+                "description": "IATA code",
+                "nullable": true
+              },
+              "icao": {
+                "type": "string",
+                "description": "ICAO code",
+                "nullable": true
+              }
+            }
+          }
+        ]
+      },
+      "BaseDto": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "string",
+            "description": "Unique id for entity",
+            "nullable": true
+          }
+        }
+      },
+      "PageMeta": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/Meta"
+          },
+          {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "index_from": {
+                "type": "integer",
+                "format": "int32"
+              },
+              "page_index": {
+                "type": "integer",
+                "format": "int32"
+              },
+              "page_size": {
+                "type": "integer",
+                "format": "int32"
+              },
+              "total_count": {
+                "type": "integer",
+                "format": "int32"
+              },
+              "total_pages": {
+                "type": "integer",
+                "format": "int32"
+              },
+              "has_previous_page": {
+                "type": "boolean"
+              },
+              "has_next_page": {
+                "type": "boolean"
+              }
+            }
+          }
+        ]
+      },
+      "BaseResponseOfAircraftDto": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "data": {
+            "nullable": true,
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/AircraftDto"
+              }
+            ]
+          },
+          "meta": {
+            "nullable": true,
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/Meta"
+              }
+            ]
+          }
+        }
+      },
+      "BasePageResponseOfIEnumerableOfAirlineDto": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "data": {
+            "type": "array",
+            "nullable": true,
+            "items": {
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/AirlineDto"
+              }
+            }
+          },
+          "meta": {
+            "nullable": true,
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/PageMeta"
+              }
+            ]
+          }
+        }
+      },
+      "AirlineDto": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/BaseDto"
+          },
+          {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "name": {
+                "type": "string",
+                "description": "Airline name",
+                "nullable": true
+              },
+              "alias": {
+                "type": "string",
+                "nullable": true
+              },
+              "iata": {
+                "type": "string",
+                "description": "Airline IATA code",
+                "nullable": true
+              },
+              "icao": {
+                "type": "string",
+                "description": "Airline ICAO code",
+                "nullable": true
+              },
+              "country_name": {
+                "type": "string",
+                "description": "Airline country name",
+                "nullable": true
+              },
+              "country_code": {
+                "type": "string",
+                "description": "Airline country code",
+                "nullable": true
+              }
+            }
+          }
+        ]
+      },
+      "BaseResponseOfAirlineDto": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "data": {
+            "nullable": true,
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/AirlineDto"
+              }
+            ]
+          },
+          "meta": {
+            "nullable": true,
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/Meta"
+              }
+            ]
+          }
+        }
+      },
+      "BasePageResponseOfIEnumerableOfAirportDto": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "data": {
+            "type": "array",
+            "nullable": true,
+            "items": {
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/AirportDto"
+              }
+            }
+          },
+          "meta": {
+            "nullable": true,
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/PageMeta"
+              }
+            ]
+          }
+        }
+      },
+      "AirportDto": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/BaseDto"
+          },
+          {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "name": {
+                "type": "string",
+                "nullable": true
+              },
+              "city_name": {
+                "type": "string",
+                "nullable": true
+              },
+              "city_code": {
+                "type": "string",
+                "nullable": true
+              },
+              "country_name": {
+                "type": "string",
+                "nullable": true
+              },
+              "country_code": {
+                "type": "string",
+                "nullable": true
+              },
+              "iata": {
+                "type": "string",
+                "nullable": true
+              },
+              "location": {
+                "nullable": true,
+                "oneOf": [
+                  {
+                    "$ref": "#/components/schemas/Location"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      },
+      "Location": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/ValueObject"
+          },
+          {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "latitude": {
+                "type": "number",
+                "format": "float",
+                "maximum": 90.0,
+                "minimum": -90.0
+              },
+              "longitude": {
+                "type": "number",
+                "format": "float",
+                "maximum": 180.0,
+                "minimum": -180.0
+              }
+            }
+          }
+        ]
+      },
+      "ValueObject": {
+        "type": "object",
+        "x-abstract": true,
+        "additionalProperties": false
+      },
+      "BaseResponseOfAirportDto": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "data": {
+            "nullable": true,
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/AirportDto"
+              }
+            ]
+          },
+          "meta": {
+            "nullable": true,
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/Meta"
+              }
+            ]
+          }
+        }
+      },
+      "BaseResponseOfCreateBookingResponse": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "data": {
+            "nullable": true,
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/CreateBookingResponse"
+              }
+            ]
+          },
+          "meta": {
+            "nullable": true,
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/Meta"
+              }
+            ]
+          }
+        }
+      },
+      "CreateBookingResponse": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "booking_id": {
+            "type": "string",
+            "nullable": true
+          },
+          "booking_reference": {
+            "type": "string",
+            "nullable": true
+          },
+          "amount": {
+            "nullable": true,
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/Amount"
+              }
+            ]
+          },
+          "tax_amount": {
+            "nullable": true,
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/Amount"
+              }
+            ]
+          },
+          "booking_status": {
+            "$ref": "#/components/schemas/BookingStatusTypes"
+          },
+          "ticketing_status": {
+            "$ref": "#/components/schemas/TicketingStatusTypes"
+          },
+          "is_cancellable": {
+            "type": "boolean"
+          },
+          "cancellable_until": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "voidable_until": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "ticketing_time_limit": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "is_voidable": {
+            "type": "boolean"
+          },
+          "flight_data": {
+            "type": "array",
+            "nullable": true,
+            "items": {
+              "$ref": "#/components/schemas/BookingFlightData"
+            }
+          },
+          "passengers": {
+            "type": "array",
+            "nullable": true,
+            "items": {
+              "$ref": "#/components/schemas/Passenger"
+            }
+          }
+        }
+      },
+      "Amount": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/ValueObject"
+          },
+          {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "value": {
+                "type": "number",
+                "format": "decimal"
+              },
+              "currency": {
+                "type": "string",
+                "default": "EUR",
+                "maxLength": 5,
+                "nullable": true
+              }
+            }
+          }
+        ]
+      },
+      "BookingStatusTypes": {
+        "type": "string",
+        "description": "",
+        "x-enumNames": [
+          "None",
+          "PreBooking",
+          "Pending",
+          "Booked",
+          "Cancelled",
+          "BookingFailed",
+          "BookingCancellationFailed"
+        ],
+        "enum": [
+          "None",
+          "PreBooking",
+          "Pending",
+          "Booked",
+          "Cancelled",
+          "BookingFailed",
+          "BookingCancellationFailed"
+        ]
+      },
+      "TicketingStatusTypes": {
+        "type": "string",
+        "description": "",
+        "x-enumNames": [
+          "None",
+          "TicketingInProgress",
+          "TicketIssued",
+          "TicketIssuedFailed",
+          "Void",
+          "VoidFailed"
+        ],
+        "enum": [
+          "None",
+          "TicketingInProgress",
+          "TicketIssued",
+          "TicketIssuedFailed",
+          "Void",
+          "VoidFailed"
+        ]
+      },
+      "BookingFlightData": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "index": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "segments": {
+            "type": "array",
+            "nullable": true,
+            "items": {
+              "$ref": "#/components/schemas/Segment"
+            }
+          },
+          "service": {
+            "nullable": true,
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/ExtraService"
+              }
+            ]
+          }
+        }
+      },
+      "Segment": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "segment_id": {
+            "type": "string",
+            "nullable": true
+          },
+          "airline": {
+            "type": "string",
+            "nullable": true
+          },
+          "rph": {
+            "type": "string",
+            "nullable": true
+          },
+          "index": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "pnr": {
+            "type": "string",
+            "nullable": true
+          },
+          "departure": {
+            "nullable": true,
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/Station"
+              }
+            ]
+          },
+          "arrival": {
+            "nullable": true,
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/Station"
+              }
+            ]
+          },
+          "cabin_type": {
+            "$ref": "#/components/schemas/CabinTypes"
+          },
+          "baggage": {
+            "nullable": true,
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/Baggage"
+              }
+            ]
+          },
+          "air_craft": {
+            "type": "string",
+            "nullable": true
+          },
+          "duration_minute": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "flight_time": {
+            "type": "string",
+            "format": "time-span",
+            "nullable": true
+          },
+          "operating_carrier": {
+            "nullable": true,
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/Carrier"
+              }
+            ]
+          },
+          "marketing_carrier": {
+            "nullable": true,
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/Carrier"
+              }
+            ]
+          },
+          "flight_number": {
+            "type": "string",
+            "nullable": true
+          },
+          "low_cost_carrier": {
+            "type": "boolean"
+          },
+          "seats_count": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "fare_rules": {
+            "type": "array",
+            "nullable": true,
+            "items": {
+              "$ref": "#/components/schemas/FareRule"
+            }
+          }
+        }
+      },
+      "Station": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "code": {
+            "type": "string",
+            "nullable": true
+          },
+          "name": {
+            "type": "string",
+            "nullable": true
+          },
+          "terminal": {
+            "type": "string",
+            "nullable": true
+          },
+          "city_code": {
+            "type": "string",
+            "nullable": true
+          },
+          "city_name": {
+            "type": "string",
+            "nullable": true
+          },
+          "country_code": {
+            "type": "string",
+            "nullable": true
+          },
+          "country_name": {
+            "type": "string",
+            "nullable": true
+          },
+          "date": {
+            "type": "string",
+            "format": "date-time"
+          }
+        }
+      },
+      "CabinTypes": {
+        "type": "string",
+        "description": "",
+        "x-enumNames": [
+          "None",
+          "Economy",
+          "Business",
+          "First",
+          "PremiumEconomy"
+        ],
+        "enum": [
+          "None",
+          "Economy",
+          "Business",
+          "First",
+          "PremiumEconomy"
+        ]
+      },
+      "Baggage": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "baggage_type": {
+            "$ref": "#/components/schemas/BaggageTypes"
+          },
+          "quantity": {
+            "type": "number",
+            "format": "decimal"
+          }
+        }
+      },
+      "BaggageTypes": {
+        "type": "string",
+        "description": "",
+        "x-enumNames": [
+          "Unknown",
+          "Nil",
+          "NilSelect",
+          "Kilos",
+          "Pounds",
+          "Pieces"
+        ],
+        "enum": [
+          "Unknown",
+          "Nil",
+          "NilSelect",
+          "Kilos",
+          "Pounds",
+          "Pieces"
+        ]
+      },
+      "Carrier": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "code": {
+            "type": "string",
+            "nullable": true
+          },
+          "number": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "name": {
+            "type": "string",
+            "nullable": true
+          }
+        }
+      },
+      "FareRule": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "rule_name": {
+            "type": "string",
+            "nullable": true
+          },
+          "rule_detail": {
+            "type": "array",
+            "nullable": true,
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      },
+      "ExtraService": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/ValueObject"
+          },
+          {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "service_id": {
+                "type": "string",
+                "maxLength": 200,
+                "nullable": true
+              },
+              "name": {
+                "type": "string",
+                "nullable": true
+              },
+              "description": {
+                "type": "string",
+                "nullable": true
+              },
+              "airline": {
+                "type": "string",
+                "maxLength": 20,
+                "nullable": true
+              },
+              "detail": {
+                "type": "string",
+                "nullable": true
+              },
+              "amount": {
+                "description": "Sum of ConvertedAmount and ProfitAmount",
+                "nullable": true,
+                "oneOf": [
+                  {
+                    "$ref": "#/components/schemas/Amount"
+                  }
+                ]
+              },
+              "type": {
+                "$ref": "#/components/schemas/ExtraServiceTypes"
+              },
+              "pricing_type": {
+                "$ref": "#/components/schemas/ExtraServicePricingType"
+              }
+            }
+          }
+        ]
+      },
+      "ExtraServiceTypes": {
+        "type": "string",
+        "description": "",
+        "x-enumNames": [
+          "Baggage"
+        ],
+        "enum": [
+          "Baggage"
+        ]
+      },
+      "ExtraServicePricingType": {
+        "type": "string",
+        "description": "",
+        "x-enumNames": [
+          "None",
+          "PerPassenger",
+          "AllPassenger"
+        ],
+        "enum": [
+          "None",
+          "PerPassenger",
+          "AllPassenger"
+        ]
+      },
+      "Passenger": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/ValueObject"
+          },
+          {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "email",
+              "first_name",
+              "last_name",
+              "birth_date",
+              "birth_place"
+            ],
+            "properties": {
+              "email": {
+                "type": "string",
+                "maxLength": 200,
+                "minLength": 1
+              },
+              "phone_number": {
+                "type": "string",
+                "maxLength": 50,
+                "nullable": true
+              },
+              "title": {
+                "$ref": "#/components/schemas/PassengerTitleTypes"
+              },
+              "first_name": {
+                "type": "string",
+                "maxLength": 150,
+                "minLength": 1
+              },
+              "middle_name": {
+                "type": "string",
+                "maxLength": 150,
+                "nullable": true
+              },
+              "last_name": {
+                "type": "string",
+                "maxLength": 150,
+                "minLength": 1
+              },
+              "tickets": {
+                "type": "array",
+                "nullable": true,
+                "items": {
+                  "$ref": "#/components/schemas/PassengerTicket"
+                }
+              },
+              "passenger_id": {
+                "type": "string",
+                "nullable": true
+              },
+              "birth_date": {
+                "type": "string",
+                "format": "date-time",
+                "minLength": 1
+              },
+              "birth_place": {
+                "type": "string",
+                "maxLength": 50,
+                "minLength": 1
+              },
+              "nationality": {
+                "type": "string",
+                "description": "Country code",
+                "maxLength": 20,
+                "nullable": true
+              },
+              "document": {
+                "nullable": true,
+                "oneOf": [
+                  {
+                    "$ref": "#/components/schemas/PassengerDocument"
+                  }
+                ]
+              },
+              "gender": {
+                "$ref": "#/components/schemas/GenderTypes"
+              },
+              "extra_services": {
+                "type": "array",
+                "nullable": true,
+                "items": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        ]
+      },
+      "PassengerTitleTypes": {
+        "type": "string",
+        "description": "",
+        "x-enumNames": [
+          "Mr",
+          "Sir",
+          "Lord",
+          "Mrs",
+          "Lady",
+          "Miss",
+          "Mstr",
+          "Inf",
+          "Ms"
+        ],
+        "enum": [
+          "Mr",
+          "Sir",
+          "Lord",
+          "Mrs",
+          "Lady",
+          "Miss",
+          "Mstr",
+          "Inf",
+          "Ms"
+        ]
+      },
+      "PassengerTicket": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "ticket_number": {
+            "type": "string",
+            "nullable": true
+          },
+          "segment_index": {
+            "type": "string",
+            "nullable": true
+          },
+          "flight_number": {
+            "type": "string",
+            "nullable": true
+          },
+          "carrier": {
+            "nullable": true,
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/Carrier"
+              }
+            ]
+          },
+          "pnr": {
+            "type": "string",
+            "nullable": true
+          },
+          "ticket_status": {
+            "$ref": "#/components/schemas/TicketingStatusTypes"
+          }
+        }
+      },
+      "PassengerDocument": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "number"
+        ],
+        "properties": {
+          "number": {
+            "type": "string",
+            "minLength": 1
+          },
+          "type": {
+            "$ref": "#/components/schemas/PassengerDocumentTypes"
+          },
+          "expiry_date": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          }
+        }
+      },
+      "PassengerDocumentTypes": {
+        "type": "string",
+        "description": "",
+        "x-enumNames": [
+          "Unknown",
+          "IdentityCard",
+          "Passport",
+          "DriverLicense",
+          "DomesticTravelDocument"
+        ],
+        "enum": [
+          "Unknown",
+          "IdentityCard",
+          "Passport",
+          "DriverLicense",
+          "DomesticTravelDocument"
+        ]
+      },
+      "GenderTypes": {
+        "type": "string",
+        "description": "",
+        "x-enumNames": [
+          "NoSpecified",
+          "Male",
+          "Female"
+        ],
+        "enum": [
+          "NoSpecified",
+          "Male",
+          "Female"
+        ]
+      },
+      "CreateBookingRequest": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "offer_id",
+          "booking_data"
+        ],
+        "properties": {
+          "offer_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "booking_data": {
+            "$ref": "#/components/schemas/BookingRequestDto"
+          }
+        }
+      },
+      "BookingRequestDto": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "contact_name",
+          "contact_phone",
+          "contact_email",
+          "post_code"
+        ],
+        "properties": {
+          "passengers": {
+            "type": "array",
+            "nullable": true,
+            "items": {
+              "$ref": "#/components/schemas/CreateBookingPassengerDto"
+            }
+          },
+          "contact_name": {
+            "type": "string",
+            "minLength": 1
+          },
+          "contact_phone": {
+            "type": "string",
+            "minLength": 1
+          },
+          "contact_email": {
+            "type": "string",
+            "minLength": 1
+          },
+          "post_code": {
+            "type": "string",
+            "minLength": 1
+          },
+          "reference": {
+            "type": "string",
+            "maxLength": 50,
+            "nullable": true
+          }
+        }
+      },
+      "CreateBookingPassengerDto": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "email",
+          "phone_number",
+          "title",
+          "first_name",
+          "last_name",
+          "birth_date",
+          "birth_place",
+          "nationality",
+          "document",
+          "gender"
+        ],
+        "properties": {
+          "email": {
+            "type": "string",
+            "format": "email",
+            "maxLength": 200,
+            "minLength": 1
+          },
+          "phone_number": {
+            "type": "string",
+            "format": "phone",
+            "maxLength": 50,
+            "minLength": 1
+          },
+          "title": {
+            "$ref": "#/components/schemas/PassengerTitleTypes"
+          },
+          "first_name": {
+            "type": "string",
+            "maxLength": 150,
+            "minLength": 1
+          },
+          "middle_name": {
+            "type": "string",
+            "maxLength": 150,
+            "nullable": true
+          },
+          "last_name": {
+            "type": "string",
+            "maxLength": 150,
+            "minLength": 1
+          },
+          "passenger_id": {
+            "type": "string",
+            "nullable": true
+          },
+          "birth_date": {
+            "type": "string",
+            "format": "date-time",
+            "minLength": 1
+          },
+          "birth_place": {
+            "type": "string",
+            "maxLength": 50,
+            "minLength": 1
+          },
+          "nationality": {
+            "type": "string",
+            "description": "Country code",
+            "maxLength": 20,
+            "minLength": 1
+          },
+          "document": {
+            "$ref": "#/components/schemas/PassengerDocument"
+          },
+          "gender": {
+            "$ref": "#/components/schemas/GenderTypes"
+          },
+          "passenger_type": {
+            "$ref": "#/components/schemas/PassengerTypes"
+          },
+          "extra_services": {
+            "type": "array",
+            "nullable": true,
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      },
+      "PassengerTypes": {
+        "type": "string",
+        "description": "",
+        "x-enumNames": [
+          "Adult",
+          "Child",
+          "Infant"
+        ],
+        "enum": [
+          "Adult",
+          "Child",
+          "Infant"
+        ]
+      },
+      "BaseResponseOfGetBookingInfoResponse": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "data": {
+            "nullable": true,
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/GetBookingInfoResponse"
+              }
+            ]
+          },
+          "meta": {
+            "nullable": true,
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/Meta"
+              }
+            ]
+          }
+        }
+      },
+      "GetBookingInfoResponse": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "booking_id": {
+            "type": "string",
+            "nullable": true
+          },
+          "booking_reference": {
+            "type": "string",
+            "nullable": true
+          },
+          "booking_status": {
+            "$ref": "#/components/schemas/BookingStatusTypes"
+          },
+          "ticketing_status": {
+            "$ref": "#/components/schemas/TicketingStatusTypes"
+          },
+          "amount": {
+            "nullable": true,
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/Amount"
+              }
+            ]
+          },
+          "is_cancellable": {
+            "type": "boolean"
+          },
+          "cancellable_until": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "voidable_until": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "ticketing_time_limit": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "is_voidable": {
+            "type": "boolean"
+          },
+          "flight_data": {
+            "type": "array",
+            "nullable": true,
+            "items": {
+              "$ref": "#/components/schemas/BookingFlightData"
+            }
+          },
+          "passengers": {
+            "type": "array",
+            "nullable": true,
+            "items": {
+              "$ref": "#/components/schemas/Passenger"
+            }
+          }
+        }
+      },
+      "BaseResponseOfCancelBookingResponse": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "data": {
+            "nullable": true,
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/CancelBookingResponse"
+              }
+            ]
+          },
+          "meta": {
+            "nullable": true,
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/Meta"
+              }
+            ]
+          }
+        }
+      },
+      "CancelBookingResponse": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "booking_id": {
+            "type": "string",
+            "nullable": true
+          },
+          "booking_reference": {
+            "type": "string",
+            "nullable": true
+          },
+          "booking_status": {
+            "$ref": "#/components/schemas/BookingStatusTypes"
+          },
+          "ticketing_status": {
+            "$ref": "#/components/schemas/TicketingStatusTypes"
+          }
+        }
+      },
+      "BasePageResponseOfGetBookingsResponse": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "data": {
+            "type": "array",
+            "nullable": true,
+            "items": {
+              "$ref": "#/components/schemas/GetBookingsResponse"
+            }
+          },
+          "meta": {
+            "nullable": true,
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/PageMeta"
+              }
+            ]
+          }
+        }
+      },
+      "GetBookingsResponse": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "booking_id": {
+            "type": "string",
+            "nullable": true
+          },
+          "booking_reference": {
+            "type": "string",
+            "nullable": true
+          },
+          "booking_status": {
+            "$ref": "#/components/schemas/BookingStatusTypes"
+          },
+          "ticketing_status": {
+            "$ref": "#/components/schemas/TicketingStatusTypes"
+          },
+          "total_amount": {
+            "nullable": true,
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/Amount"
+              }
+            ]
+          },
+          "supplier_amount": {
+            "nullable": true,
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/Amount"
+              }
+            ]
+          },
+          "converted_amount": {
+            "nullable": true,
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/Amount"
+              }
+            ]
+          },
+          "exchange_rate": {
+            "type": "number",
+            "format": "decimal"
+          },
+          "tax_amount": {
+            "nullable": true,
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/Amount"
+              }
+            ]
+          },
+          "penalty_amount": {
+            "nullable": true,
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/Amount"
+              }
+            ]
+          },
+          "service_amount": {
+            "nullable": true,
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/Amount"
+              }
+            ]
+          },
+          "amount": {
+            "nullable": true,
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/Amount"
+              }
+            ]
+          },
+          "profit_amount": {
+            "nullable": true,
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/Amount"
+              }
+            ]
+          },
+          "is_cancellable": {
+            "type": "boolean"
+          },
+          "cancellable_until": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "voidable_until": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "ticketing_time_limit": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "is_voidable": {
+            "type": "boolean"
+          },
+          "flight_data": {
+            "type": "array",
+            "nullable": true,
+            "items": {
+              "$ref": "#/components/schemas/BookingFlightData"
+            }
+          },
+          "passengers": {
+            "type": "array",
+            "nullable": true,
+            "items": {
+              "$ref": "#/components/schemas/Passenger"
+            }
+          },
+          "client_id": {
+            "type": "string",
+            "nullable": true
+          },
+          "external_id": {
+            "type": "string",
+            "nullable": true
+          }
+        }
+      },
+      "BaseResponseOfGetBookingDetailResponse": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "data": {
+            "nullable": true,
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/GetBookingDetailResponse"
+              }
+            ]
+          },
+          "meta": {
+            "nullable": true,
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/Meta"
+              }
+            ]
+          }
+        }
+      },
+      "GetBookingDetailResponse": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "booking_id": {
+            "type": "string",
+            "nullable": true
+          },
+          "booking_reference": {
+            "type": "string",
+            "nullable": true
+          },
+          "booking_status": {
+            "$ref": "#/components/schemas/BookingStatusTypes"
+          },
+          "ticketing_status": {
+            "$ref": "#/components/schemas/TicketingStatusTypes"
+          },
+          "total_amount": {
+            "nullable": true,
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/Amount"
+              }
+            ]
+          },
+          "supplier_amount": {
+            "nullable": true,
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/Amount"
+              }
+            ]
+          },
+          "converted_amount": {
+            "nullable": true,
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/Amount"
+              }
+            ]
+          },
+          "exchange_rate": {
+            "type": "number",
+            "format": "decimal"
+          },
+          "tax_amount": {
+            "nullable": true,
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/Amount"
+              }
+            ]
+          },
+          "penalty_amount": {
+            "nullable": true,
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/Amount"
+              }
+            ]
+          },
+          "service_amount": {
+            "nullable": true,
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/Amount"
+              }
+            ]
+          },
+          "profit_amount": {
+            "nullable": true,
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/Amount"
+              }
+            ]
+          },
+          "amount": {
+            "nullable": true,
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/Amount"
+              }
+            ]
+          },
+          "is_cancellable": {
+            "type": "boolean"
+          },
+          "cancellable_until": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "voidable_until": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "ticketing_time_limit": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "is_voidable": {
+            "type": "boolean"
+          },
+          "flight_data": {
+            "type": "array",
+            "nullable": true,
+            "items": {
+              "$ref": "#/components/schemas/BookingFlightData"
+            }
+          },
+          "passengers": {
+            "type": "array",
+            "nullable": true,
+            "items": {
+              "$ref": "#/components/schemas/Passenger"
+            }
+          }
+        }
+      },
+      "BasePageResponseOfIEnumerableOfCountryDto": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "data": {
+            "type": "array",
+            "nullable": true,
+            "items": {
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/CountryDto"
+              }
+            }
+          },
+          "meta": {
+            "nullable": true,
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/PageMeta"
+              }
+            ]
+          }
+        }
+      },
+      "CountryDto": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/BaseDto"
+          },
+          {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "name": {
+                "type": "string",
+                "nullable": true
+              },
+              "iso3": {
+                "type": "string",
+                "nullable": true
+              },
+              "iso2": {
+                "type": "string",
+                "nullable": true
+              },
+              "phone_code": {
+                "type": "string",
+                "nullable": true
+              },
+              "capital": {
+                "type": "string",
+                "nullable": true
+              },
+              "currency": {
+                "type": "string",
+                "nullable": true
+              },
+              "currency_symbol": {
+                "type": "string",
+                "nullable": true
+              },
+              "tld": {
+                "type": "string",
+                "nullable": true
+              },
+              "native_name": {
+                "type": "string",
+                "nullable": true
+              },
+              "region": {
+                "type": "string",
+                "nullable": true
+              },
+              "subregion": {
+                "type": "string",
+                "nullable": true
+              },
+              "timezones": {
+                "type": "array",
+                "nullable": true,
+                "items": {
+                  "$ref": "#/components/schemas/Timezone"
+                }
+              },
+              "translation": {
+                "nullable": true,
+                "oneOf": [
+                  {
+                    "$ref": "#/components/schemas/Translation"
+                  }
+                ]
+              },
+              "latitude": {
+                "type": "number",
+                "format": "float"
+              },
+              "longitude": {
+                "type": "number",
+                "format": "float"
+              },
+              "emoji": {
+                "type": "string",
+                "nullable": true
+              },
+              "emoji_u": {
+                "type": "string",
+                "nullable": true
+              }
+            }
+          }
+        ]
+      },
+      "Timezone": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "zone_name": {
+            "type": "string",
+            "nullable": true
+          },
+          "gmt_offset": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "gmt_offset_name": {
+            "type": "string",
+            "nullable": true
+          },
+          "abbreviation": {
+            "type": "string",
+            "nullable": true
+          },
+          "tz_name": {
+            "type": "string",
+            "nullable": true
+          }
+        }
+      },
+      "Translation": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "br": {
+            "type": "string",
+            "nullable": true
+          },
+          "pt": {
+            "type": "string",
+            "nullable": true
+          },
+          "nl": {
+            "type": "string",
+            "nullable": true
+          },
+          "hr": {
+            "type": "string",
+            "nullable": true
+          },
+          "fa": {
+            "type": "string",
+            "nullable": true
+          },
+          "de": {
+            "type": "string",
+            "nullable": true
+          },
+          "es": {
+            "type": "string",
+            "nullable": true
+          },
+          "fr": {
+            "type": "string",
+            "nullable": true
+          },
+          "ja": {
+            "type": "string",
+            "nullable": true
+          },
+          "it": {
+            "type": "string",
+            "nullable": true
+          },
+          "tr": {
+            "type": "string",
+            "nullable": true
+          }
+        }
+      },
+      "BasePageResponseOfCountryDto": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "data": {
+            "type": "array",
+            "nullable": true,
+            "items": {
+              "$ref": "#/components/schemas/CountryDto"
+            }
+          },
+          "meta": {
+            "nullable": true,
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/PageMeta"
+              }
+            ]
+          }
+        }
+      },
+      "BaseResponseOfCountryDto": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "data": {
+            "nullable": true,
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/CountryDto"
+              }
+            ]
+          },
+          "meta": {
+            "nullable": true,
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/Meta"
+              }
+            ]
+          }
+        }
+      },
+      "BaseResponseOfGetOfferByOfferIdResponse": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "data": {
+            "nullable": true,
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/GetOfferByOfferIdResponse"
+              }
+            ]
+          },
+          "meta": {
+            "nullable": true,
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/Meta"
+              }
+            ]
+          }
+        }
+      },
+      "GetOfferByOfferIdResponse": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/BaseDto"
+          },
+          {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "offer": {
+                "nullable": true,
+                "oneOf": [
+                  {
+                    "$ref": "#/components/schemas/OfferResponseDto"
+                  }
+                ]
+              },
+              "request": {
+                "nullable": true,
+                "oneOf": [
+                  {
+                    "$ref": "#/components/schemas/GetOfferRequest"
+                  }
+                ]
+              },
+              "route_type": {
+                "$ref": "#/components/schemas/RouteTypes"
+              }
+            }
+          }
+        ]
+      },
+      "OfferResponseDto": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "offer_id": {
+            "type": "string",
+            "nullable": true
+          },
+          "supplier_code": {
+            "type": "string",
+            "nullable": true
+          },
+          "routes": {
+            "type": "array",
+            "nullable": true,
+            "items": {
+              "$ref": "#/components/schemas/Route"
+            }
+          },
+          "amount": {
+            "nullable": true,
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/Amount"
+              }
+            ]
+          },
+          "adult_amount": {
+            "nullable": true,
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/Amount"
+              }
+            ]
+          },
+          "child_amount": {
+            "nullable": true,
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/Amount"
+              }
+            ]
+          },
+          "infant_amount": {
+            "nullable": true,
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/Amount"
+              }
+            ]
+          },
+          "penalty_amount": {
+            "nullable": true,
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/Amount"
+              }
+            ]
+          },
+          "tax_amount": {
+            "nullable": true,
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/Amount"
+              }
+            ]
+          },
+          "has_revalidation": {
+            "type": "boolean"
+          },
+          "has_ticketing_step": {
+            "type": "boolean"
+          }
+        }
+      },
+      "Route": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "index": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "requested_route": {
+            "nullable": true,
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/RouteInfo"
+              }
+            ]
+          },
+          "direction": {
+            "$ref": "#/components/schemas/DirectionTypes"
+          },
+          "segments": {
+            "type": "array",
+            "nullable": true,
+            "items": {
+              "$ref": "#/components/schemas/Segment"
+            }
+          },
+          "services": {
+            "type": "array",
+            "nullable": true,
+            "items": {
+              "$ref": "#/components/schemas/ExtraService"
+            }
+          }
+        }
+      },
+      "RouteInfo": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "departure_date"
+        ],
+        "properties": {
+          "origin": {
+            "type": "string",
+            "default": "IST",
+            "maxLength": 3,
+            "nullable": true
+          },
+          "destination": {
+            "type": "string",
+            "default": "LON",
+            "maxLength": 3,
+            "nullable": true
+          },
+          "departure_date": {
+            "type": "string",
+            "format": "date",
+            "maxLength": 10,
+            "minLength": 10
+          }
+        }
+      },
+      "DirectionTypes": {
+        "type": "string",
+        "description": "",
+        "x-enumNames": [
+          "Outbound",
+          "Return"
+        ],
+        "enum": [
+          "Outbound",
+          "Return"
+        ]
+      },
+      "GetOfferRequest": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "cabin_type",
+          "passengers",
+          "routes"
+        ],
+        "properties": {
+          "cabin_type": {
+            "$ref": "#/components/schemas/CabinTypes"
+          },
+          "passengers": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/PassengerInfo"
+            }
+          },
+          "routes": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/RouteInfo"
+            }
+          },
+          "prefered_airlines": {
+            "type": "array",
+            "default": [
+              "TK"
+            ],
+            "nullable": true,
+            "items": {
+              "type": "string"
+            }
+          },
+          "retrieve_options": {
+            "nullable": true,
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/OfferRetrievePreference"
+              }
+            ]
+          },
+          "transfer_type": {
+            "default": "Direct",
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/TransferTypes"
+              }
+            ]
+          }
+        }
+      },
+      "PassengerInfo": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "passenger_type": {
+            "$ref": "#/components/schemas/PassengerTypes"
+          },
+          "quantity": {
+            "type": "integer",
+            "format": "int32",
+            "default": 1
+          }
+        }
+      },
+      "OfferRetrievePreference": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "page_index": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "page_size": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "retrieve_type": {
+            "$ref": "#/components/schemas/OfferRetrieveTypes"
+          }
+        }
+      },
+      "OfferRetrieveTypes": {
+        "type": "string",
+        "description": "",
+        "x-enumNames": [
+          "All",
+          "Paged"
+        ],
+        "enum": [
+          "All",
+          "Paged"
+        ]
+      },
+      "TransferTypes": {
+        "type": "string",
+        "description": "",
+        "x-enumNames": [
+          "All",
+          "Direct",
+          "OneStop"
+        ],
+        "enum": [
+          "All",
+          "Direct",
+          "OneStop"
+        ]
+      },
+      "RouteTypes": {
+        "type": "string",
+        "description": "",
+        "x-enumNames": [
+          "OneWay",
+          "RoundTrip",
+          "MultiCity"
+        ],
+        "enum": [
+          "OneWay",
+          "RoundTrip",
+          "MultiCity"
+        ]
+      },
+      "BaseResponseOfGetOfferRulesResponse": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "data": {
+            "nullable": true,
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/GetOfferRulesResponse"
+              }
+            ]
+          },
+          "meta": {
+            "nullable": true,
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/Meta"
+              }
+            ]
+          }
+        }
+      },
+      "GetOfferRulesResponse": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "offer": {
+            "nullable": true,
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/OfferResponseDto"
+              }
+            ]
+          },
+          "request": {
+            "nullable": true,
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/GetOfferRulesRequest"
+              }
+            ]
+          },
+          "data_id": {
+            "type": "string",
+            "nullable": true
+          }
+        }
+      },
+      "GetOfferRulesRequest": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "offer_id": {
+            "type": "string",
+            "nullable": true
+          }
+        }
+      },
+      "BaseResponseOfOfferRevalidateResponse": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "data": {
+            "nullable": true,
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/OfferRevalidateResponse"
+              }
+            ]
+          },
+          "meta": {
+            "nullable": true,
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/Meta"
+              }
+            ]
+          }
+        }
+      },
+      "OfferRevalidateResponse": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "offer": {
+            "nullable": true,
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/OfferResponseDto"
+              }
+            ]
+          },
+          "is_offer_changed": {
+            "type": "boolean"
+          }
+        }
+      },
+      "BaseObjectPageResponseOfGetOfferResponse": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "data": {
+            "nullable": true,
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/GetOfferResponse"
+              }
+            ]
+          },
+          "meta": {
+            "nullable": true,
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/PageMeta"
+              }
+            ]
+          }
+        }
+      },
+      "GetOfferResponse": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "data_id": {
+            "type": "string",
+            "nullable": true
+          },
+          "offers": {
+            "type": "array",
+            "nullable": true,
+            "items": {
+              "$ref": "#/components/schemas/OfferResponseDto"
+            }
+          },
+          "request": {
+            "nullable": true,
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/GetOfferRequest"
+              }
+            ]
+          },
+          "total_count": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "filtered_count": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "route_type": {
+            "$ref": "#/components/schemas/RouteTypes"
+          }
+        }
+      },
+      "BaseResponseOfIssueTicketResponse": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "data": {
+            "nullable": true,
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/IssueTicketResponse"
+              }
+            ]
+          },
+          "meta": {
+            "nullable": true,
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/Meta"
+              }
+            ]
+          }
+        }
+      },
+      "IssueTicketResponse": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "success": {
+            "type": "boolean"
+          },
+          "booking_id": {
+            "type": "string",
+            "nullable": true
+          },
+          "booking_reference": {
+            "type": "string",
+            "nullable": true
+          },
+          "amount": {
+            "nullable": true,
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/Amount"
+              }
+            ]
+          },
+          "penalty_amount": {
+            "nullable": true,
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/Amount"
+              }
+            ]
+          },
+          "tax_amount": {
+            "nullable": true,
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/Amount"
+              }
+            ]
+          },
+          "is_voidable": {
+            "type": "boolean"
+          },
+          "cancellable_until": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "voidable_until": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "flight_data": {
+            "type": "array",
+            "nullable": true,
+            "items": {
+              "$ref": "#/components/schemas/BookingFlightData"
+            }
+          },
+          "passengers": {
+            "type": "array",
+            "nullable": true,
+            "items": {
+              "$ref": "#/components/schemas/Passenger"
+            }
+          },
+          "booking_status": {
+            "$ref": "#/components/schemas/BookingStatusTypes"
+          },
+          "ticketing_status": {
+            "$ref": "#/components/schemas/TicketingStatusTypes"
+          }
+        }
+      },
+      "IssueTicketRequest": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "booking_id"
+        ],
+        "properties": {
+          "booking_id": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      },
+      "BaseResponseOfVoidBookingResponse": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "data": {
+            "nullable": true,
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/VoidBookingResponse"
+              }
+            ]
+          },
+          "meta": {
+            "nullable": true,
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/Meta"
+              }
+            ]
+          }
+        }
+      },
+      "VoidBookingResponse": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "success": {
+            "type": "boolean"
+          },
+          "refunded_amount": {
+            "nullable": true,
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/Amount"
+              }
+            ]
+          },
+          "penalty_amount": {
+            "nullable": true,
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/Amount"
+              }
+            ]
+          },
+          "booking_reference": {
+            "type": "string",
+            "nullable": true
+          },
+          "booking_status": {
+            "$ref": "#/components/schemas/BookingStatusTypes"
+          },
+          "ticketing_status": {
+            "$ref": "#/components/schemas/TicketingStatusTypes"
+          }
+        }
+      },
+      "BasePageResponseOfIEnumerableOfSupplierDto": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "data": {
+            "type": "array",
+            "nullable": true,
+            "items": {
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/SupplierDto"
+              }
+            }
+          },
+          "meta": {
+            "nullable": true,
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/PageMeta"
+              }
+            ]
+          }
+        }
+      },
+      "SupplierDto": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/BaseDto"
+          },
+          {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "name"
+            ],
+            "properties": {
+              "name": {
+                "type": "string",
+                "maxLength": 100,
+                "minLength": 1
+              },
+              "code": {
+                "type": "string",
+                "maxLength": 25,
+                "nullable": true
+              },
+              "api_code": {
+                "type": "string",
+                "maxLength": 25,
+                "nullable": true
+              },
+              "ignored_airlines": {
+                "type": "array",
+                "nullable": true,
+                "items": {
+                  "type": "string"
+                }
+              },
+              "is_disabled": {
+                "type": "boolean"
+              },
+              "currency": {
+                "type": "string",
+                "default": "EUR",
+                "maxLength": 5,
+                "nullable": true
+              },
+              "profits": {
+                "type": "array",
+                "nullable": true,
+                "items": {
+                  "$ref": "#/components/schemas/Profit"
+                }
+              }
+            }
+          }
+        ]
+      },
+      "Profit": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/ValueObject"
+          },
+          {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "min_amount": {
+                "type": "number",
+                "format": "decimal"
+              },
+              "max_amount": {
+                "type": "number",
+                "format": "decimal"
+              },
+              "profit_type": {
+                "$ref": "#/components/schemas/ProfitTypes"
+              },
+              "profit_value": {
+                "type": "number",
+                "format": "decimal"
+              },
+              "profit_currency": {
+                "type": "string",
+                "nullable": true
+              }
+            }
+          }
+        ]
+      },
+      "ProfitTypes": {
+        "type": "string",
+        "description": "",
+        "x-enumNames": [
+          "Ratio",
+          "Fixed"
+        ],
+        "enum": [
+          "Ratio",
+          "Fixed"
+        ]
+      },
+      "BaseResponseOfSupplierDto": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "data": {
+            "nullable": true,
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/SupplierDto"
+              }
+            ]
+          },
+          "meta": {
+            "nullable": true,
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/Meta"
+              }
+            ]
+          }
+        }
+      }
+    },
+    "securitySchemes": {
+      "Bearer": {
+        "type": "apiKey",
+        "description": "Enter 'Bearer' [space] and then your valid token in the text input below.\r\n\r\nExample: \"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9\"",
+        "name": "Authorization",
+        "in": "header",
+        "scheme": "Bearer",
+        "flows": {
+          "implicit": {
+            "tokenUrl": "https://utest.identity.hub.b2bholidays.com/token",
+            "scopes": {}
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,9 @@
+type: object
+additionalProperties: false
+properties:
+  offer:
+    nullable: true
+    oneOf:
+      - $ref: ./OfferResponseDto.yaml
+  is_offer_changed:
+    type: boolean

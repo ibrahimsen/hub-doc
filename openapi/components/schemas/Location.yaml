@@ -1,0 +1,15 @@
+allOf:
+  - $ref: ./ValueObject.yaml
+  - type: object
+    additionalProperties: false
+    properties:
+      latitude:
+        type: number
+        format: float
+        maximum: 90
+        minimum: -90
+      longitude:
+        type: number
+        format: float
+        maximum: 180
+        minimum: -180

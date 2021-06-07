@@ -1,0 +1,45 @@
+get:
+  tags:
+    - Offer
+  operationId: Offer_GeOfferRules
+  parameters:
+    - name: offer_id
+      in: path
+      required: true
+      schema:
+        type: string
+        nullable: true
+      x-position: 1
+  responses:
+    '200':
+      description: ''
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/BaseResponseOfGetOfferRulesResponse.yaml
+    '400':
+      description: ''
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/BaseErrorResponse.yaml
+    '404':
+      description: ''
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/BaseErrorResponse.yaml
+    '422':
+      description: ''
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/BaseErrorResponse.yaml
+    '500':
+      description: ''
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/BaseErrorResponse.yaml
+  security:
+    - Bearer: []

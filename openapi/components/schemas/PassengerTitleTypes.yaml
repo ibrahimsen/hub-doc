@@ -1,0 +1,22 @@
+type: string
+description: ''
+x-enumNames:
+  - Mr
+  - Sir
+  - Lord
+  - Mrs
+  - Lady
+  - Miss
+  - Mstr
+  - Inf
+  - Ms
+enum:
+  - Mr
+  - Sir
+  - Lord
+  - Mrs
+  - Lady
+  - Miss
+  - Mstr
+  - Inf
+  - Ms

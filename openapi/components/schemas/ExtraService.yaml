@@ -1,0 +1,31 @@
+allOf:
+  - $ref: ./ValueObject.yaml
+  - type: object
+    additionalProperties: false
+    properties:
+      service_id:
+        type: string
+        maxLength: 200
+        nullable: true
+      name:
+        type: string
+        nullable: true
+      description:
+        type: string
+        nullable: true
+      airline:
+        type: string
+        maxLength: 20
+        nullable: true
+      detail:
+        type: string
+        nullable: true
+      amount:
+        description: Sum of ConvertedAmount and ProfitAmount
+        nullable: true
+        oneOf:
+          - $ref: ./Amount.yaml
+      type:
+        $ref: ./ExtraServiceTypes.yaml
+      pricing_type:
+        $ref: ./ExtraServicePricingType.yaml

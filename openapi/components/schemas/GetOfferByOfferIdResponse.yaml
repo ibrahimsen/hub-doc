@@ -1,0 +1,15 @@
+allOf:
+  - $ref: ./BaseDto.yaml
+  - type: object
+    additionalProperties: false
+    properties:
+      offer:
+        nullable: true
+        oneOf:
+          - $ref: ./OfferResponseDto.yaml
+      request:
+        nullable: true
+        oneOf:
+          - $ref: ./GetOfferRequest.yaml
+      route_type:
+        $ref: ./RouteTypes.yaml

@@ -1,0 +1,8 @@
+type: object
+additionalProperties: false
+properties:
+  baggage_type:
+    $ref: ./BaggageTypes.yaml
+  quantity:
+    type: number
+    format: decimal

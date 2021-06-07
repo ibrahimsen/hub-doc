@@ -1,0 +1,61 @@
+x-generator: NSwag v13.11.1.0 (NJsonSchema v10.4.3.0 (Newtonsoft.Json v13.0.0.0))
+openapi: 3.0.0
+info:
+  title: Flight API
+  description: Flight API
+  version: Beta
+servers:
+  - url: 'https://utest.flight.hub.b2bholidays.com'
+paths:
+  /aircrafts:
+    $ref: paths/aircrafts.yaml
+  '/aircrafts/{id}':
+    $ref: 'paths/aircrafts@{id}.yaml'
+  /airlines:
+    $ref: paths/airlines.yaml
+  '/airlines/{id}':
+    $ref: 'paths/airlines@{id}.yaml'
+  /airports:
+    $ref: paths/airports.yaml
+  '/airports/{id}':
+    $ref: 'paths/airports@{id}.yaml'
+  /booking:
+    $ref: paths/booking.yaml
+  '/booking/{booking_id}':
+    $ref: 'paths/booking@{booking_id}.yaml'
+  /booking-history:
+    $ref: paths/booking-history.yaml
+  /booking-history/detail:
+    $ref: paths/booking-history@detail.yaml
+  /countries:
+    $ref: paths/countries.yaml
+  '/countries/{id}':
+    $ref: 'paths/countries@{id}.yaml'
+  '/offer/{offer_id}':
+    $ref: 'paths/offer@{offer_id}.yaml'
+  '/offer/{offer_id}/rules':
+    $ref: 'paths/offer@{offer_id}@rules.yaml'
+  '/offer/{offer_id}/revalidate':
+    $ref: 'paths/offer@{offer_id}@revalidate.yaml'
+  /offers:
+    $ref: paths/offers.yaml
+  '/offers/{data_id}':
+    $ref: 'paths/offers@{data_id}.yaml'
+  '/offers/{data_id}/archive':
+    $ref: 'paths/offers@{data_id}@archive.yaml'
+  /ticketing:
+    $ref: paths/ticketing.yaml
+  '/ticketing/{booking_id}':
+    $ref: 'paths/ticketing@{booking_id}.yaml'
+components:
+  securitySchemes:
+    Bearer:
+      type: apiKey
+      description: "Enter 'Bearer' [space] and then your valid token in the text input below.\r\n\r\nExample: \"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9\""
+      name: Authorization
+      in: header
+      scheme: Bearer
+      flows:
+        implicit:
+          tokenUrl: 'https://utest.identity.hub.b2bholidays.com/token'
+          scopes: {}

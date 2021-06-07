@@ -1,0 +1,27 @@
+type: object
+additionalProperties: false
+properties:
+  code:
+    type: string
+    nullable: true
+  name:
+    type: string
+    nullable: true
+  terminal:
+    type: string
+    nullable: true
+  city_code:
+    type: string
+    nullable: true
+  city_name:
+    type: string
+    nullable: true
+  country_code:
+    type: string
+    nullable: true
+  country_name:
+    type: string
+    nullable: true
+  date:
+    type: string
+    format: date-time

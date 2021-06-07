@@ -1,0 +1,10 @@
+type: string
+description: ''
+x-enumNames:
+  - Adult
+  - Child
+  - Infant
+enum:
+  - Adult
+  - Child
+  - Infant

@@ -1,0 +1,42 @@
+type: object
+additionalProperties: false
+properties:
+  offer_id:
+    type: string
+    nullable: true
+  supplier_code:
+    type: string
+    nullable: true
+  routes:
+    type: array
+    nullable: true
+    items:
+      $ref: ./Route.yaml
+  amount:
+    nullable: true
+    oneOf:
+      - $ref: ./Amount.yaml
+  adult_amount:
+    nullable: true
+    oneOf:
+      - $ref: ./Amount.yaml
+  child_amount:
+    nullable: true
+    oneOf:
+      - $ref: ./Amount.yaml
+  infant_amount:
+    nullable: true
+    oneOf:
+      - $ref: ./Amount.yaml
+  penalty_amount:
+    nullable: true
+    oneOf:
+      - $ref: ./Amount.yaml
+  tax_amount:
+    nullable: true
+    oneOf:
+      - $ref: ./Amount.yaml
+  has_revalidation:
+    type: boolean
+  has_ticketing_step:
+    type: boolean

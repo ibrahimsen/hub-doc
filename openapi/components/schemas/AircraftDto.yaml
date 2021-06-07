@@ -1,0 +1,17 @@
+allOf:
+  - $ref: ./BaseDto.yaml
+  - type: object
+    additionalProperties: false
+    properties:
+      name:
+        type: string
+        description: Aircraft name
+        nullable: true
+      iata:
+        type: string
+        description: IATA code
+        nullable: true
+      icao:
+        type: string
+        description: ICAO code
+        nullable: true

@@ -1,0 +1,21 @@
+type: object
+additionalProperties: false
+properties:
+  ticket_number:
+    type: string
+    nullable: true
+  segment_index:
+    type: string
+    nullable: true
+  flight_number:
+    type: string
+    nullable: true
+  carrier:
+    nullable: true
+    oneOf:
+      - $ref: ./Carrier.yaml
+  pnr:
+    type: string
+    nullable: true
+  ticket_status:
+    $ref: ./TicketingStatusTypes.yaml

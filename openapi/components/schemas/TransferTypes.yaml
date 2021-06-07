@@ -1,0 +1,10 @@
+type: string
+description: ''
+x-enumNames:
+  - All
+  - Direct
+  - OneStop
+enum:
+  - All
+  - Direct
+  - OneStop

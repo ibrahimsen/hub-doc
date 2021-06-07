@@ -1,0 +1,36 @@
+allOf:
+  - $ref: ./BaseDto.yaml
+  - type: object
+    additionalProperties: false
+    required:
+      - name
+    properties:
+      name:
+        type: string
+        maxLength: 100
+        minLength: 1
+      code:
+        type: string
+        maxLength: 25
+        nullable: true
+      api_code:
+        type: string
+        maxLength: 25
+        nullable: true
+      ignored_airlines:
+        type: array
+        nullable: true
+        items:
+          type: string
+      is_disabled:
+        type: boolean
+      currency:
+        type: string
+        default: EUR
+        maxLength: 5
+        nullable: true
+      profits:
+        type: array
+        nullable: true
+        items:
+          $ref: ./Profit.yaml

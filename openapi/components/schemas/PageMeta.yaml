@@ -1,0 +1,24 @@
+allOf:
+  - $ref: ./Meta.yaml
+  - type: object
+    additionalProperties: false
+    properties:
+      index_from:
+        type: integer
+        format: int32
+      page_index:
+        type: integer
+        format: int32
+      page_size:
+        type: integer
+        format: int32
+      total_count:
+        type: integer
+        format: int32
+      total_pages:
+        type: integer
+        format: int32
+      has_previous_page:
+        type: boolean
+      has_next_page:
+        type: boolean

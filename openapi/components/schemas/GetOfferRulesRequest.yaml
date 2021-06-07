@@ -1,0 +1,6 @@
+type: object
+additionalProperties: false
+properties:
+  offer_id:
+    type: string
+    nullable: true

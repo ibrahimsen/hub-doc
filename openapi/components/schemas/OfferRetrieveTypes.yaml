@@ -1,0 +1,8 @@
+type: string
+description: ''
+x-enumNames:
+  - All
+  - Paged
+enum:
+  - All
+  - Paged

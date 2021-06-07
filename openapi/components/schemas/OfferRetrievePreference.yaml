@@ -1,0 +1,11 @@
+type: object
+additionalProperties: false
+properties:
+  page_index:
+    type: integer
+    format: int32
+  page_size:
+    type: integer
+    format: int32
+  retrieve_type:
+    $ref: ./OfferRetrieveTypes.yaml

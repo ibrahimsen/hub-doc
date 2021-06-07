@@ -1,0 +1,27 @@
+allOf:
+  - $ref: ./BaseDto.yaml
+  - type: object
+    additionalProperties: false
+    properties:
+      name:
+        type: string
+        nullable: true
+      city_name:
+        type: string
+        nullable: true
+      city_code:
+        type: string
+        nullable: true
+      country_name:
+        type: string
+        nullable: true
+      country_code:
+        type: string
+        nullable: true
+      iata:
+        type: string
+        nullable: true
+      location:
+        nullable: true
+        oneOf:
+          - $ref: ./Location.yaml

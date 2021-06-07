@@ -1,0 +1,102 @@
+get:
+  tags:
+    - Countries
+  operationId: Countries_Get
+  parameters:
+    - name: Index
+      in: query
+      schema:
+        type: integer
+        format: int32
+      x-position: 1
+    - name: Size
+      in: query
+      schema:
+        type: integer
+        format: int32
+      x-position: 2
+    - name: From
+      in: query
+      schema:
+        type: integer
+        format: int32
+      x-position: 3
+  responses:
+    '200':
+      description: ''
+      content:
+        application/json:
+          schema:
+            $ref: >-
+              ../components/schemas/BasePageResponseOfIEnumerableOfCountryDto.yaml
+    '400':
+      description: ''
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/BaseErrorResponse.yaml
+    '404':
+      description: ''
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/BaseErrorResponse.yaml
+    '422':
+      description: ''
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/BaseErrorResponse.yaml
+    '500':
+      description: ''
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/BaseErrorResponse.yaml
+  security:
+    - Bearer: []
+post:
+  tags:
+    - Countries
+  operationId: Countries_Create
+  requestBody:
+    x-name: request
+    content:
+      application/json:
+        schema:
+          $ref: ../components/schemas/CountryDto.yaml
+    required: true
+    x-position: 1
+  responses:
+    '200':
+      description: ''
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/BaseResponseOfCountryDto.yaml
+    '400':
+      description: ''
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/BaseErrorResponse.yaml
+    '404':
+      description: ''
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/BaseErrorResponse.yaml
+    '422':
+      description: ''
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/BaseErrorResponse.yaml
+    '500':
+      description: ''
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/BaseErrorResponse.yaml
+  security:
+    - Bearer: []

@@ -1,0 +1,14 @@
+type: string
+description: ''
+x-enumNames:
+  - Unknown
+  - IdentityCard
+  - Passport
+  - DriverLicense
+  - DomesticTravelDocument
+enum:
+  - Unknown
+  - IdentityCard
+  - Passport
+  - DriverLicense
+  - DomesticTravelDocument

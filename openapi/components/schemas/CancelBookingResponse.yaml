@@ -1,0 +1,13 @@
+type: object
+additionalProperties: false
+properties:
+  booking_id:
+    type: string
+    nullable: true
+  booking_reference:
+    type: string
+    nullable: true
+  booking_status:
+    $ref: ./BookingStatusTypes.yaml
+  ticketing_status:
+    $ref: ./TicketingStatusTypes.yaml

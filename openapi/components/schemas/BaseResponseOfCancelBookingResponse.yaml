@@ -1,0 +1,11 @@
+type: object
+additionalProperties: false
+properties:
+  data:
+    nullable: true
+    oneOf:
+      - $ref: ./CancelBookingResponse.yaml
+  meta:
+    nullable: true
+    oneOf:
+      - $ref: ./Meta.yaml

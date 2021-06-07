@@ -1,0 +1,20 @@
+type: object
+additionalProperties: false
+required:
+  - departure_date
+properties:
+  origin:
+    type: string
+    default: IST
+    maxLength: 3
+    nullable: true
+  destination:
+    type: string
+    default: LON
+    maxLength: 3
+    nullable: true
+  departure_date:
+    type: string
+    format: date
+    maxLength: 10
+    minLength: 10

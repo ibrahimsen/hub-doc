@@ -1,0 +1,12 @@
+type: object
+additionalProperties: false
+properties:
+  errors:
+    type: array
+    nullable: true
+    items:
+      $ref: ./Error.yaml
+  meta:
+    nullable: true
+    oneOf:
+      - $ref: ./Meta.yaml

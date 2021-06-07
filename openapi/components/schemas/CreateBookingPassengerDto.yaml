@@ -1,0 +1,65 @@
+type: object
+additionalProperties: false
+required:
+  - email
+  - phone_number
+  - title
+  - first_name
+  - last_name
+  - birth_date
+  - birth_place
+  - nationality
+  - document
+  - gender
+properties:
+  email:
+    type: string
+    format: email
+    maxLength: 200
+    minLength: 1
+  phone_number:
+    type: string
+    format: phone
+    maxLength: 50
+    minLength: 1
+  title:
+    $ref: ./PassengerTitleTypes.yaml
+  first_name:
+    type: string
+    maxLength: 150
+    minLength: 1
+  middle_name:
+    type: string
+    maxLength: 150
+    nullable: true
+  last_name:
+    type: string
+    maxLength: 150
+    minLength: 1
+  passenger_id:
+    type: string
+    nullable: true
+  birth_date:
+    type: string
+    format: date-time
+    minLength: 1
+  birth_place:
+    type: string
+    maxLength: 50
+    minLength: 1
+  nationality:
+    type: string
+    description: Country code
+    maxLength: 20
+    minLength: 1
+  document:
+    $ref: ./PassengerDocument.yaml
+  gender:
+    $ref: ./GenderTypes.yaml
+  passenger_type:
+    $ref: ./PassengerTypes.yaml
+  extra_services:
+    type: array
+    nullable: true
+    items:
+      type: string

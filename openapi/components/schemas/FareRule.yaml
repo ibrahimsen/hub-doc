@@ -1,0 +1,11 @@
+type: object
+additionalProperties: false
+properties:
+  rule_name:
+    type: string
+    nullable: true
+  rule_detail:
+    type: array
+    nullable: true
+    items:
+      type: string

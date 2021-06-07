@@ -1,0 +1,10 @@
+type: string
+description: ''
+x-enumNames:
+  - None
+  - PerPassenger
+  - AllPassenger
+enum:
+  - None
+  - PerPassenger
+  - AllPassenger

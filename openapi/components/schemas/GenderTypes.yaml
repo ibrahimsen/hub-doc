@@ -1,0 +1,10 @@
+type: string
+description: ''
+x-enumNames:
+  - NoSpecified
+  - Male
+  - Female
+enum:
+  - NoSpecified
+  - Male
+  - Female

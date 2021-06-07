@@ -1,0 +1,29 @@
+type: object
+additionalProperties: false
+required:
+  - contact_name
+  - contact_phone
+  - contact_email
+  - post_code
+properties:
+  passengers:
+    type: array
+    nullable: true
+    items:
+      $ref: ./CreateBookingPassengerDto.yaml
+  contact_name:
+    type: string
+    minLength: 1
+  contact_phone:
+    type: string
+    minLength: 1
+  contact_email:
+    type: string
+    minLength: 1
+  post_code:
+    type: string
+    minLength: 1
+  reference:
+    type: string
+    maxLength: 50
+    nullable: true

@@ -1,0 +1,47 @@
+type: object
+additionalProperties: false
+properties:
+  success:
+    type: boolean
+  booking_id:
+    type: string
+    nullable: true
+  booking_reference:
+    type: string
+    nullable: true
+  amount:
+    nullable: true
+    oneOf:
+      - $ref: ./Amount.yaml
+  penalty_amount:
+    nullable: true
+    oneOf:
+      - $ref: ./Amount.yaml
+  tax_amount:
+    nullable: true
+    oneOf:
+      - $ref: ./Amount.yaml
+  is_voidable:
+    type: boolean
+  cancellable_until:
+    type: string
+    format: date-time
+    nullable: true
+  voidable_until:
+    type: string
+    format: date-time
+    nullable: true
+  flight_data:
+    type: array
+    nullable: true
+    items:
+      $ref: ./BookingFlightData.yaml
+  passengers:
+    type: array
+    nullable: true
+    items:
+      $ref: ./Passenger.yaml
+  booking_status:
+    $ref: ./BookingStatusTypes.yaml
+  ticketing_status:
+    $ref: ./TicketingStatusTypes.yaml

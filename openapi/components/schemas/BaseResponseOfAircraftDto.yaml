@@ -1,0 +1,11 @@
+type: object
+additionalProperties: false
+properties:
+  data:
+    nullable: true
+    oneOf:
+      - $ref: ./AircraftDto.yaml
+  meta:
+    nullable: true
+    oneOf:
+      - $ref: ./Meta.yaml

@@ -1,0 +1,63 @@
+type: object
+additionalProperties: false
+properties:
+  segment_id:
+    type: string
+    nullable: true
+  airline:
+    type: string
+    nullable: true
+  rph:
+    type: string
+    nullable: true
+  index:
+    type: integer
+    format: int32
+  pnr:
+    type: string
+    nullable: true
+  departure:
+    nullable: true
+    oneOf:
+      - $ref: ./Station.yaml
+  arrival:
+    nullable: true
+    oneOf:
+      - $ref: ./Station.yaml
+  cabin_type:
+    $ref: ./CabinTypes.yaml
+  baggage:
+    nullable: true
+    oneOf:
+      - $ref: ./Baggage.yaml
+  air_craft:
+    type: string
+    nullable: true
+  duration_minute:
+    type: integer
+    format: int32
+  flight_time:
+    type: string
+    format: time-span
+    nullable: true
+  operating_carrier:
+    nullable: true
+    oneOf:
+      - $ref: ./Carrier.yaml
+  marketing_carrier:
+    nullable: true
+    oneOf:
+      - $ref: ./Carrier.yaml
+  flight_number:
+    type: string
+    nullable: true
+  low_cost_carrier:
+    type: boolean
+  seats_count:
+    type: integer
+    format: int32
+  fare_rules:
+    type: array
+    nullable: true
+    items:
+      $ref: ./FareRule.yaml

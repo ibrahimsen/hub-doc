@@ -1,0 +1,22 @@
+type: object
+additionalProperties: false
+properties:
+  index:
+    type: integer
+    format: int32
+  requested_route:
+    nullable: true
+    oneOf:
+      - $ref: ./RouteInfo.yaml
+  direction:
+    $ref: ./DirectionTypes.yaml
+  segments:
+    type: array
+    nullable: true
+    items:
+      $ref: ./Segment.yaml
+  services:
+    type: array
+    nullable: true
+    items:
+      $ref: ./ExtraService.yaml

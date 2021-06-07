@@ -1,0 +1,65 @@
+allOf:
+  - $ref: ./ValueObject.yaml
+  - type: object
+    additionalProperties: false
+    required:
+      - email
+      - first_name
+      - last_name
+      - birth_date
+      - birth_place
+    properties:
+      email:
+        type: string
+        maxLength: 200
+        minLength: 1
+      phone_number:
+        type: string
+        maxLength: 50
+        nullable: true
+      title:
+        $ref: ./PassengerTitleTypes.yaml
+      first_name:
+        type: string
+        maxLength: 150
+        minLength: 1
+      middle_name:
+        type: string
+        maxLength: 150
+        nullable: true
+      last_name:
+        type: string
+        maxLength: 150
+        minLength: 1
+      tickets:
+        type: array
+        nullable: true
+        items:
+          $ref: ./PassengerTicket.yaml
+      passenger_id:
+        type: string
+        nullable: true
+      birth_date:
+        type: string
+        format: date-time
+        minLength: 1
+      birth_place:
+        type: string
+        maxLength: 50
+        minLength: 1
+      nationality:
+        type: string
+        description: Country code
+        maxLength: 20
+        nullable: true
+      document:
+        nullable: true
+        oneOf:
+          - $ref: ./PassengerDocument.yaml
+      gender:
+        $ref: ./GenderTypes.yaml
+      extra_services:
+        type: array
+        nullable: true
+        items:
+          type: string

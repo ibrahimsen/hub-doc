@@ -1,0 +1,59 @@
+allOf:
+  - $ref: ./BaseDto.yaml
+  - type: object
+    additionalProperties: false
+    properties:
+      name:
+        type: string
+        nullable: true
+      iso3:
+        type: string
+        nullable: true
+      iso2:
+        type: string
+        nullable: true
+      phone_code:
+        type: string
+        nullable: true
+      capital:
+        type: string
+        nullable: true
+      currency:
+        type: string
+        nullable: true
+      currency_symbol:
+        type: string
+        nullable: true
+      tld:
+        type: string
+        nullable: true
+      native_name:
+        type: string
+        nullable: true
+      region:
+        type: string
+        nullable: true
+      subregion:
+        type: string
+        nullable: true
+      timezones:
+        type: array
+        nullable: true
+        items:
+          $ref: ./Timezone.yaml
+      translation:
+        nullable: true
+        oneOf:
+          - $ref: ./Translation.yaml
+      latitude:
+        type: number
+        format: float
+      longitude:
+        type: number
+        format: float
+      emoji:
+        type: string
+        nullable: true
+      emoji_u:
+        type: string
+        nullable: true
